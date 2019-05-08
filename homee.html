@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="./master.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div id="clockdiv"></div>
+    <div id="timer"></div>
+    <button id="firstBut" class=" myButton btn btn-secondary" type="button" name="button" onclick="Timer(.5)">ЭХЛЭХ</button>
+    <div id="c1" class="container" >
+      <div class="col-8">
+        <div class="container">
+          <div class="row">
+            <!-- <h1 id="firstCont">HAHA</h1> -->
+            <button type="button" class="btn btn-light firstBut" name="button" onclick="Back(1)">Дараагийн</button>
+            <!-- onClick="document.getElementById('firstCont').innerHTML='SECOND question';" -->
+          </div>
+        </div>
+      </div>
+      <div class="col-8">
+        <div class="container shadow">
+          <div class="row">
+            <img src="./1.jpg" class="img" alt="Responsive image">
+          </div>
+          <h4 class="pb-4 pt-4">Oberyn Martell -ийн хоч?</h4>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div name="1" class="q1 flex-row bd-highlight btn-group btn-group-toggle" data-toggle="buttons" style="width:100%">
+              <button type="radio" value="a" id="o1" class="btn but btn-light bd-highlight" onclick="check(1, this.id)">ANSWERA</button>
+              <button type="radio" value="b" id="o2" class="btn but btn-light bd-highlight" onclick="check(1, this.id)">ANSWERB</button>
+              <button type="radio" value="c" id="o3" class="btn but btn-light bd-highlight" onclick="check(1, this.id)">ANSWERC</button>
+              <button type="radio" value="d" id="o4" class="btn but btn-light bd-highlight" onclick="check(1, this.id)">ANSWERD</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 2 -->
+
+    <div id="c2" class="container" style="display:none">
+      <div class="col-8">
+        <div class="container">
+          <div class="row">
+            <button type="button" class="btn btn-light firstBut" name="button" onclick="Back(2)">Дараагийн</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-8">
+        <div class="container shadow">
+          <div class="row">
+            <img src="./2.jpg" class="img" alt="Responsive image">
+          </div>
+          <h4 class="pb-4 pt-4">Blackwater-д Tyrion ярианыхаа төгсгөлд: "Явцгаая, ..."</h4>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div name="2" class="q2 flex-row bd-highlight btn-group btn-group-toggle" data-toggle="buttons" style="width:100%">
+              <button type="button" value="a" id="o1" class="btn but btn-light bd-highlight" onclick="check(2, this.id)">ANSWERA</button>
+              <button type="button" value="b" id="o2" class="btn but btn-light bd-highlight" onclick="check(2, this.id)">ANSWERB</button>
+              <button type="button" value="c" id="o3" class="btn but btn-light bd-highlight" onclick="check(2, this.id)">ANSWERC</button>
+              <button type="button" value="d" id="o4" class="btn but btn-light bd-highlight" onclick="check(2, this.id)">ANSWERD</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 -->
+
+    <div id="c3" class="container" style="display:none">
+      <div class="col-8">
+        <div class="container">
+          <div class="row">
+            <button type="button" class="btn btn-light firstBut" name="button" onclick="Back(3)">Дараагийн</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-8">
+        <div class="container shadow">
+          <div class="row">
+            <img src="./3.jpg" class="img" alt="Responsive image">
+          </div>
+          <h4 class="pb-4 pt-4">Blackwater-д Tyrion ярианыхаа төгсгөлд: "Явцгаая, ..."</h4>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div name="3" class="q2 flex-row bd-highlight btn-group btn-group-toggle" data-toggle="buttons" style="width:100%">
+              <button type="button" value="a" id="o1" class="btn but btn-light bd-highlight" onclick="check(3, this.id)">ANSWERA</button>
+              <button type="button" value="b" id="o2" class="btn but btn-light bd-highlight" onclick="check(3, this.id)">ANSWERB</button>
+              <button type="button" value="c" id="o3" class="btn but btn-light bd-highlight" onclick="check(3, this.id)">ANSWERC</button>
+              <button type="button" value="d" id="o4" class="btn but btn-light bd-highlight" onclick="check(3, this.id)">ANSWERD</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 4 -->
+
+    <div id="c4" class="container" style="display:none">
+      <div class="col-8">
+        <div class="container">
+          <div class="row">
+            <button type="button" class="btn btn-light firstBut" name="button" onclick="Back(4)">Дараагийн</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-8">
+        <div class="container shadow">
+          <div class="row">
+            <img src="./4.jpg" class="img" alt="Responsive image">
+          </div>
+          <h4 class="pb-4 pt-4">Blackwater-д Tyrion ярианыхаа төгсгөлд: "Явцгаая, ..."</h4>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div name="4" class="q2 flex-row bd-highlight btn-group btn-group-toggle" data-toggle="buttons" style="width:100%">
+              <button type="button" value="a" id="o1" class="btn but btn-light bd-highlight" onclick="check(4, this.id)">ANSWERA</button>
+              <button type="button" value="b" id="o2" class="btn but btn-light bd-highlight" onclick="check(4, this.id)">ANSWERB</button>
+              <button type="button" value="c" id="o3" class="btn but btn-light bd-highlight" onclick="check(4, this.id)">ANSWERC</button>
+              <button type="button" value="d" id="o4" class="btn but btn-light bd-highlight" onclick="check(4, this.id)">ANSWERD</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 5 -->
+
+    <div id="c5" class="container" style="display:none">
+      <div class="col-8">
+        <div class="container">
+          <div class="row">
+            <button type="button" class="btn btn-primary firstBut" name="button" onclick="Back(5)">Дараагийн</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-8">
+        <div class="container shadow">
+          <div class="row">
+            <img src="./5.jpg" class="img" alt="Responsive image">
+          </div>
+          <h4 class="pb-4 pt-4">Blackwater-д Tyrion ярианыхаа төгсгөлд: "Явцгаая, ..."</h4>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div name="5" class="q2 flex-row bd-highlight btn-group btn-group-toggle" data-toggle="buttons" style="width:100%">
+              <button type="button" value="a" id="o1" class="btn but btn-light bd-highlight" onclick="check(5, this.id)">ANSWERA</button>
+              <button type="button" value="b" id="o2" class="btn but btn-light bd-highlight" onclick="check(5, this.id)">ANSWERB</button>
+              <button type="button" value="c" id="o3" class="btn but btn-light bd-highlight" onclick="check(5, this.id)">ANSWERC</button>
+              <button type="button" value="d" id="o4" class="btn but btn-light bd-highlight" onclick="check(5, this.id)">ANSWERD</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
+    <div id="answer" class="container" style="display:none">
+      <div class="col-8">
+        <div class="container">
+        </div>
+      </div>
+      <div class="col-8">
+        <div class="answer container shadow">
+          <div class="row">
+            <span class="ans"><span id="haha">0</span> ЗӨВ ХАРИУЛЛАА.</span>
+            <p></p>
+            <p class="an">МУУГҮЙ ШҮҮ! ТА БИДНИЙ ТУХАЙ БАГА Ч БОЛОВ МЭДДЭГ Л ЮМ БАЙНА...</p>
+          </div>
+          <div class="row">
+            <img src="./6.jpg" class="img" alt="Responsive image">
+          </div>
+        </div>
+        </div>
+      </div>
+      <div id="answer2" class="container" style="display:none">
+        <div class="col-8">
+          <div class="container">
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="answer container shadow">
+            <div class="row">
+              <span class="ans"><span id="haha2">0</span> ЗӨВ ХАРИУЛЛАА.</span>
+              <p></p>
+              <p class="an">ҮГҮЙ БАЙЛГҮЙ ДЭЭ. ТА БИДНИЙ ТАЛААР ЮУ Ч МЭДДЭГГҮЙ ЮМ БАЙНА..</p>
+            </div>
+            <div class="row">
+              <img src="./7.jpg" class="img" alt="Responsive image">
+            </div>
+          </div>
+          </div>
+        </div>
+    <!-- audio -->
+        <audio id="myAudio" controls>
+          <source src="timeClick.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="right" controls>
+          <source src="right.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="wrong" controls>
+          <source src="wrong.mp3" type="audio/mpeg">
+        </audio>
+    <!-- js -->
+
+  <script type="text/javascript">
+
+    function PrintR(right) {
+      var x = document.getElementById("right");
+      x.autoplay = true;
+      x.load();
+      document.getElementById('answer').style.display='block';
+      document.getElementById('haha').innerHTML=right;
+      document.getElementById('clockdiv').style.display='none';
+      document.getElementById('timer').style.display='none';
+      document.getElementById('c5').style.display='none';
+      document.getElementById('c4').style.display='none';
+      document.getElementById('c3').style.display='none';
+      document.getElementById('c2').style.display='none';
+      document.getElementById('c1').style.display='none';
+    }
+
+    function PrintW(right) {
+      console.log(right+ 'you passed it');
+      var x = document.getElementById("wrong");
+      x.autoplay = true;
+      x.load();
+      document.getElementById('answer2').style.display='block';
+      document.getElementById('haha2').innerHTML=right;
+      document.getElementById('clockdiv').style.display='none';
+      document.getElementById('timer').style.display='none';
+      document.getElementById('c5').style.display='none';
+      document.getElementById('c4').style.display='none';
+      document.getElementById('c3').style.display='none';
+      document.getElementById('c2').style.display='none';
+      document.getElementById('c1').style.display='none';
+
+    }
+
+
+    function Back(i, w, r) {
+        if ( i < 5 ) {
+          if ( w == 3 ) {
+            PrintW(r);
+          } else {
+            var x = document.getElementById('c'+(i+1));
+            // console.log(('c'+(i+1)));
+            x.style.display='block';
+            document.getElementById('c'+ i).style.display='none';
+          }
+        }
+          else {
+            Result();
+          }
+          return;
+      }
+
+    var w = 0; var r = 0;
+    var rightAns = ["a", "a", "b", "b", "b"];
+    var userAns = [];
+    function check(qNumb, id) {
+      console.log(rightAns[qNumb-1]);
+      console.log('you chose' + document.getElementById(id).value);
+      userAns[qNumb-1] = document.getElementById(id).value;
+      if ( rightAns[qNumb-1] == document.getElementById(id).value ) {
+        document.getElementById(id).style.backgroundColor="lightgreen";
+        console.log('right');
+        r++;
+        console.log('r is equal to ' + r);
+        setTimeout(function() { Back(qNumb, w, r); }, 1000);
+      } else {
+        document.getElementById(id).style.backgroundColor="red";
+        console.log('wrong');
+        w++;
+        setTimeout(function() { Back(qNumb, w, r); }, 1000);
+      }
+      }
+    // timer
+    function Timer(min) {
+      var x = document.getElementById("myAudio");
+      x.autoplay = true;
+      x.load();
+      // var audio = new Audio('timeClick.mp3');
+      // audio.play();
+      document.getElementById('c1').style.display='block';
+      document.getElementById('firstBut').style.display='none';
+      var time_in_minutes = min;
+      var current_time = Date.parse(new Date());
+      var deadline = new Date(current_time + time_in_minutes*60*1000);
+
+
+      function time_remaining(endtime){
+  	  var t = Date.parse(endtime) - Date.parse(new Date());
+  	  var seconds = Math.floor( (t/1000) % 60 );
+  	  var minutes = Math.floor( (t/1000/60) % 60 );
+  	  var hours = Math.floor( (t/(1000*60*60)) % 24 );
+  	  var days = Math.floor( t/(1000*60*60*24) );
+  	  return {'total':t, 'days':days, 'hours':hours, 'minutes':minutes, 'seconds':seconds};
+      }
+      function run_clock(id,endtime){
+  	  var clock = document.getElementById(id);
+  	  function update_clock(){
+  		var t = time_remaining(endtime);
+      if ( t.minutes < 10 && t.seconds < 10 ) {
+        clock.innerHTML = '0'+ t.minutes+' : 0'+t.seconds+'';
+      } else if ( t.minutes < 10 ) {
+        clock.innerHTML = '0'+ t.minutes+' : '+t.seconds+'';
+      } else if ( t.seconds < 10 ) {
+        clock.innerHTML = t.minutes+' : 0'+t.seconds+'';
+      }
+  		if(t.total<=0){ clearInterval(timeinterval); Result(); return; }
+  	  }
+  	  update_clock(); // run function once at first to avoid delay
+  	  var timeinterval = setInterval(update_clock,1000);
+      }
+      run_clock('clockdiv',deadline);
+    }
+    // func to end all and show result
+
+    function Result() {
+      var right = 0;
+      for ( j = 0; j < 5; j++ ) {
+        console.log('righ answer is ' + (rightAns[j]));
+        console.log('user answer is ' + (userAns[j]));
+        if ( rightAns[j] == userAns[j] ) {
+          right++;
+        }
+      }
+      if ( right >= 4 ) {
+        PrintR(right);
+      } else {
+        PrintW(right);
+      }
+      return;
+    }
+    // timer func ends here
+  </script>
+</html>
