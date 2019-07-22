@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .item{
+        background: blue;
+        height: 20px;
+        flex: 0.33 1 auto;
+      }
+      .container{
+        display: flex;
+        flex-flow: row;
+      }
+      .grid-item{
+        background: blue;
+        height: 20px;
+      }
+      .grid{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 20px;
+        //1fr
+      }
+      .grid-pro{
+        display: grid;
+        grid-template: 'sidebar header header' 'sidebar main main' 'sidebar footer footer';
+        grid-template-rows: 40px 40px 40px; 
+      }
+      .header, .footer, .main{
+      }
+      .header{
+        background: blue;
+        grid-area: header;
+      }
+      .footer{
+        background: red;
+        grid-area: footer;
+      }
+      .sidebar{
+        background: grey;
+        grid-area: sidebar;
+      }
+      .main{
+        background: black;
+        grid-area: main;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">
+
+      </div>
+      <div class="item">
+
+      </div>
+      <div class="item">
+
+      </div>
+    </div>
+    <br>
+    <div class="grid">
+      <div class="grid-item">
+
+      </div>
+      <div class="grid-item">
+
+      </div>
+      <div class="grid-item">
+
+      </div>
+    </div>
+    <br>
+    <div class="grid-pro">
+      <div class="header">
+
+      </div>
+      <div class="footer">
+
+      </div>
+      <div class="sidebar">
+
+      </div>
+      <div class="main">
+
+      </div>
+    </div>
+  </body>
+</html>
